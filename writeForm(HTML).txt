@@ -1,0 +1,103 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>  
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	#wrap{
+		width:600px;
+		height:600px;
+		background-image:url('img/backgroundFUllImage.jpg');
+		background-repeat:no-repeat;
+		background-size:cover;
+		
+	}
+	#header{
+		width:500px;
+		height:100px;
+		text-align:center;
+		line-height:80px;
+		color:orange;
+	}
+</style>
+<title>회원가입</title>
+<script type="text/javascript"
+		src="http://localhost:8080/10-member/script/memberScript.js">
+</script>
+</head>
+<body>
+<div id="wrap">
+<div id="header">
+	<h1>WELCOME TO JOIN!!</h1>
+</div>	
+<div id="content"><form name="writeForm" method="post" action="write.jsp">
+<table border="0">
+	<tr>
+		<td width="70" align="center"><p style="color:#f7e462">이름</p></td>
+		<td><input type="text" name="name" placeholder="이름 입력"></td>		
+	</tr>
+	<tr>
+		<td width="70" align="center"><p style="color:#f7e462">아이디</p></td>
+		<td>
+			<input type="text" name="id">
+			<input type="button" value="중복체크" onclick="checkId()">
+		</td>	
+	</tr>
+	<tr>
+		<td width="70" align="center"><p style="color:#f7e462">비밀번호</p></td>
+		<td><input type="password" name="pwd" size="30"></td>
+	</tr>
+	<tr>
+		<td width="70" align="center"><p style="color:#f7e462">재확인</p></td>
+		<td><input type="password" name="repwd" size="30"></td>
+	</tr>
+	<tr>
+		<td width="70" align="center"><p style="color:#f7e462">성별</p></td>
+		<td> 
+			<input type="radio" name="gender" value="0" checked>남
+			<input type="radio" name="gender" value="1">여
+		</td>
+	</tr>
+	<tr>
+		<td width="70" align="center"><p style="color:#f7e462">이메일</p></td>
+		<td>
+			<input type="text" name="email1">@
+			<select name="email2" style="width:100px;">
+				<option value="naver.com">naver.com</option>
+				<option value="gmail.com">gmail.com</option>
+				<option value="hanmail.com">hanmil.com</option>
+				<option value="nate.com">nate.com</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td width = "70" align="center"><p style="color:#f7e462">핸드폰</p></td>
+		<td>
+			<select name="tel1" style="width:70px;">
+				<option value="010">010</option>
+				<option value="011">011</option>
+				<option value="019">019</option>
+			</select>-
+			<input type="text" name="tel2" size="10">-
+			<input type="text" name="tel3" size="10">
+		</td>
+	</tr>
+	<tr>
+		<td width="70" align="center"><p style="color:#f7e462">주소</p></td>
+		<td> 
+			<input type="text" name="addr" size="50"><br>
+		</td>
+	</tr>
+	<tr id="buttonBox">
+		<td colspan="2" align="center">
+			<input id="joinButton" type="button" value="회원가입" onclick="javascript:checkWrite()">
+			<input iud="resetButton" type="reset" value="다시 작성">
+		</td>
+
+</table>
+</form>
+</div><!--  -->
+</div><!-- //wrap end -->
+</body>
+</html>
